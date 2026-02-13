@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RideSafe Insurance — Pakistan's #1 Bike Insurance Platform</title>
+  <meta name="description"
+    content="RideSafe Insurance — Compare and buy the best bike insurance plans in Pakistan. Theft protection, accidental damage, and third-party liability coverage for your motorcycle." />
+  <meta name="keywords"
+    content="bike insurance, motorcycle insurance, Pakistan, theft protection, accidental damage, insurance comparison, Honda, Yamaha, Suzuki, bike coverage" />
+  <meta property="og:title" content="RideSafe Insurance — Pakistan's #1 Bike Insurance Platform" />
+  <meta property="og:description"
+    content="Compare and buy the best bike insurance plans in Pakistan. Protect your ride with comprehensive coverage." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-icon">
+        <svg viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="url(#grad)" stroke-width="3" stroke-linecap="round"
+            stroke-dasharray="90 30" class="preloader-circle" />
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0ea5e9" />
+              <stop offset="100%" stop-color="#14b8a6" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="preloader-text">RideSafe</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L3 9V23L16 30L29 23V9L16 2Z" fill="url(#logoGrad)" opacity="0.15" />
+            <path d="M16 2L3 9V23L16 30L29 23V9L16 2Z" stroke="url(#logoGrad)" stroke-width="1.5" />
+            <path d="M10 18C10 18 12 14 16 14C20 14 22 18 22 18" stroke="url(#logoGrad)" stroke-width="2"
+              stroke-linecap="round" />
+            <circle cx="11" cy="20" r="3" stroke="url(#logoGrad)" stroke-width="1.5" />
+            <circle cx="21" cy="20" r="3" stroke="url(#logoGrad)" stroke-width="1.5" />
+            <defs>
+              <linearGradient id="logoGrad" x1="3" y1="2" x2="29" y2="30">
+                <stop stop-color="#0ea5e9" />
+                <stop offset="1" stop-color="#14b8a6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Ride<span class="logo-highlight">Safe</span></span>
+      </a>
+
+      <nav id="nav" class="nav">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#coverage" class="nav-link" data-section="coverage">Coverage</a>
+        <a href="#quote" class="nav-link" data-section="quote">Get Quote</a>
+        <a href="#how-it-works" class="nav-link" data-section="how-it-works">How It Works</a>
+        <a href="#plans" class="nav-link" data-section="plans">Plans</a>
+        <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#quote" class="btn btn-primary btn-nav" id="nav-cta">Get a Quote</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="#home" class="mobile-link" data-section="home">Home</a>
+      <a href="#coverage" class="mobile-link" data-section="coverage">Coverage</a>
+      <a href="#quote" class="mobile-link" data-section="quote">Get Quote</a>
+      <a href="#how-it-works" class="mobile-link" data-section="how-it-works">How It Works</a>
+      <a href="#plans" class="mobile-link" data-section="plans">Plans</a>
+      <a href="#faq" class="mobile-link" data-section="faq">FAQ</a>
+      <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+      <a href="#quote" class="btn btn-primary btn-mobile">Get a Quote</a>
+    </div>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-particles" id="hero-particles"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <i data-lucide="shield-check" class="hero-badge-icon"></i>
+            <span>Pakistan's #1 Trusted Bike Insurance</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="hero-title-line">Protect Your</span>
+            <span class="hero-title-line gradient-text" id="hero-typing">Ride Today</span>
+          </h1>
+          <p class="hero-desc">
+            Compare the best bike insurance plans from Pakistan's top insurers. Get comprehensive coverage for theft,
+            accidents, and third-party liability — all in under 60 seconds.
+          </p>
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-primary btn-lg" id="hero-cta">
+              <i data-lucide="zap"></i>
+              Get Instant Quote
+            </a>
+            <a href="#how-it-works" class="btn btn-ghost btn-lg" id="hero-learn">
+              <i data-lucide="play-circle"></i>
+              How It Works
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-item">
+              <i data-lucide="check-circle" class="trust-icon"></i>
+              <span>SECP Registered</span>
+            </div>
+            <div class="hero-trust-item">
+              <i data-lucide="check-circle" class="trust-icon"></i>
+              <span>10,000+ Bikes Insured</span>
+            </div>
+            <div class="hero-trust-item">
+              <i data-lucide="check-circle" class="trust-icon"></i>
+              <span>Fast Claim Settlement</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="/images/hero-bike.png" alt="Insured motorcycle" class="hero-image" />
+            <div class="hero-float-card card-1">
+              <i data-lucide="shield" class="float-icon"></i>
+              <div>
+                <strong>Full Coverage</strong>
+                <small>Theft + Accidents</small>
+              </div>
+            </div>
+            <div class="hero-float-card card-2">
+              <i data-lucide="clock" class="float-icon"></i>
+              <div>
+                <strong>60 Seconds</strong>
+                <small>Instant Quote</small>
+              </div>
+            </div>
+            <div class="hero-float-card card-3">
+              <i data-lucide="trending-down" class="float-icon"></i>
+              <div>
+                <strong>From Rs 999</strong>
+                <small>Annual Premium</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card" data-count="10000" data-suffix="+">
+            <div class="stat-icon-wrap">
+              <i data-lucide="bike" class="stat-icon"></i>
+            </div>
+            <h3 class="stat-number">0</h3>
+            <p class="stat-label">Bikes Insured</p>
+          </div>
+          <div class="stat-card" data-count="50" data-suffix="M+">
+            <div class="stat-icon-wrap">
+              <i data-lucide="banknote" class="stat-icon"></i>
+            </div>
+            <h3 class="stat-number">0</h3>
+            <p class="stat-label">Claims Settled (Rs)</p>
+          </div>
+          <div class="stat-card" data-count="15" data-suffix="+">
+            <div class="stat-icon-wrap">
+              <i data-lucide="building-2" class="stat-icon"></i>
+            </div>
+            <h3 class="stat-number">0</h3>
+            <p class="stat-label">Insurance Partners</p>
+          </div>
+          <div class="stat-card" data-count="30" data-suffix=" Sec">
+            <div class="stat-icon-wrap">
+              <i data-lucide="timer" class="stat-icon"></i>
+            </div>
+            <h3 class="stat-number">0</h3>
+            <p class="stat-label">Avg Quote Time</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section id="coverage" class="coverage section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Coverage Options</span>
+          <h2 class="section-title">Comprehensive Bike <span class="gradient-text">Protection</span></h2>
+          <p class="section-desc">We offer complete coverage solutions designed specifically for motorcycle owners in
+            Pakistan.</p>
+        </div>
+        <div class="coverage-grid">
+          <div class="coverage-card" data-aos="fade-up">
+            <div class="coverage-icon-wrap">
+              <i data-lucide="shield-alert" class="coverage-icon"></i>
+            </div>
+            <h3 class="coverage-title">Theft Protection</h3>
+            <p class="coverage-desc">Full reimbursement if your bike is stolen. Covers the current market value of your
+              motorcycle with hassle-free claim process.</p>
+            <ul class="coverage-features">
+              <li><i data-lucide="check"></i> Full market value coverage</li>
+              <li><i data-lucide="check"></i> 24/7 FIR assistance</li>
+              <li><i data-lucide="check"></i> Quick claim settlement</li>
+            </ul>
+          </div>
+          <div class="coverage-card featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="coverage-badge">Most Popular</div>
+            <div class="coverage-icon-wrap">
+              <i data-lucide="car" class="coverage-icon"></i>
+            </div>
+            <h3 class="coverage-title">Accidental Damage</h3>
+            <p class="coverage-desc">Coverage for damages caused by accidents, fire, or natural disasters. Get your bike
+              repaired at authorized workshops.</p>
+            <ul class="coverage-features">
+              <li><i data-lucide="check"></i> Collision & overturning</li>
+              <li><i data-lucide="check"></i> Fire & explosion</li>
+              <li><i data-lucide="check"></i> Natural disasters</li>
+              <li><i data-lucide="check"></i> Authorized workshop repairs</li>
+            </ul>
+          </div>
+          <div class="coverage-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="coverage-icon-wrap">
+              <i data-lucide="users" class="coverage-icon"></i>
+            </div>
+            <h3 class="coverage-title">Third-Party Liability</h3>
+            <p class="coverage-desc">Covers legal liability for damage caused to third-party property or injury to other
+              people in an accident.</p>
+            <ul class="coverage-features">
+              <li><i data-lucide="check"></i> Property damage coverage</li>
+              <li><i data-lucide="check"></i> Bodily injury protection</li>
+              <li><i data-lucide="check"></i> Legal defense costs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote" class="quote-section section">
+      <div class="container">
+        <div class="quote-wrapper">
+          <div class="quote-info">
+            <span class="section-tag">Get Insured</span>
+            <h2 class="section-title">Get Your <span class="gradient-text">Instant Quote</span></h2>
+            <p class="section-desc">Fill in your bike details and get a quote in seconds. No hidden charges, no
+              complicated forms.</p>
+            <div class="quote-benefits">
+              <div class="quote-benefit">
+                <i data-lucide="zap" class="benefit-icon"></i>
+                <div>
+                  <strong>Instant Comparison</strong>
+                  <p>Compare plans from 15+ insurers</p>
+                </div>
+              </div>
+              <div class="quote-benefit">
+                <i data-lucide="lock" class="benefit-icon"></i>
+                <div>
+                  <strong>100% Secure</strong>
+                  <p>Your data is encrypted & protected</p>
+                </div>
+              </div>
+              <div class="quote-benefit">
+                <i data-lucide="phone" class="benefit-icon"></i>
+                <div>
+                  <strong>Expert Support</strong>
+                  <p>Dedicated bike insurance advisors</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quote-form-wrapper">
+            <form id="quote-form" class="quote-form">
+              <div class="form-header">
+                <h3>Get Your Quote</h3>
+                <p>Fill in the details below</p>
+              </div>
+
+              <!-- Step Indicators -->
+              <div class="form-steps">
+                <div class="form-step active" data-step="1">
+                  <div class="step-circle">1</div>
+                  <span>Bike Details</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="form-step" data-step="2">
+                  <div class="step-circle">2</div>
+                  <span>Your Info</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="form-step" data-step="3">
+                  <div class="step-circle">3</div>
+                  <span>Review</span>
+                </div>
+              </div>
+
+              <!-- Step 1: Bike Details -->
+              <div class="form-panel active" id="step-1">
+                <div class="form-group">
+                  <label for="bike-brand">Bike Brand</label>
+                  <select id="bike-brand" required>
+                    <option value="">Select Brand</option>
+                    <option value="honda">Atlas Honda</option>
+                    <option value="yamaha">Yamaha</option>
+                    <option value="suzuki">Suzuki</option>
+                    <option value="united">United</option>
+                    <option value="road-prince">Road Prince</option>
+                    <option value="super-power">Super Power</option>
+                    <option value="hi-speed">Hi-Speed</option>
+                    <option value="metro">Metro</option>
+                    <option value="crown">Crown</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="bike-model">Bike Model</label>
+                  <select id="bike-model" required>
+                    <option value="">Select Model</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="bike-year">Manufacturing Year</label>
+                    <select id="bike-year" required>
+                      <option value="">Select Year</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="bike-cc">Engine CC</label>
+                    <select id="bike-cc" required>
+                      <option value="">Select CC</option>
+                      <option value="70">70cc</option>
+                      <option value="100">100cc</option>
+                      <option value="110">110cc</option>
+                      <option value="125">125cc</option>
+                      <option value="150">150cc</option>
+                      <option value="200">200cc</option>
+                      <option value="250">250cc+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="bike-value">Estimated Market Value (Rs)</label>
+                  <input type="text" id="bike-value" placeholder="e.g. 250,000" required />
+                  <small class="form-hint">Enter the current market value of your bike</small>
+                </div>
+                <div class="form-group">
+                  <label for="bike-city">Registration City</label>
+                  <select id="bike-city" required>
+                    <option value="">Select City</option>
+                    <option value="karachi">Karachi</option>
+                    <option value="lahore">Lahore</option>
+                    <option value="islamabad">Islamabad</option>
+                    <option value="rawalpindi">Rawalpindi</option>
+                    <option value="faisalabad">Faisalabad</option>
+                    <option value="multan">Multan</option>
+                    <option value="peshawar">Peshawar</option>
+                    <option value="quetta">Quetta</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" id="step-1-next">
+                  Continue <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Step 2: Personal Info -->
+              <div class="form-panel" id="step-2">
+                <div class="form-group">
+                  <label for="full-name">Full Name</label>
+                  <input type="text" id="full-name" placeholder="Enter your full name" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Mobile Number</label>
+                  <div class="input-with-prefix">
+                    <span class="input-prefix">+92</span>
+                    <input type="tel" id="phone" placeholder="3XX XXXXXXX" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" placeholder="your@email.com" />
+                  <small class="form-hint">Optional — for receiving your quote</small>
+                </div>
+                <div class="form-group">
+                  <label for="cnic">CNIC Number</label>
+                  <input type="text" id="cnic" placeholder="XXXXX-XXXXXXX-X" />
+                  <small class="form-hint">Required for policy issuance</small>
+                </div>
+                <div class="form-row">
+                  <button type="button" class="btn btn-outline btn-block" id="step-2-prev">
+                    <i data-lucide="arrow-left"></i> Back
+                  </button>
+                  <button type="button" class="btn btn-primary btn-block" id="step-2-next">
+                    Continue <i data-lucide="arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3: Review -->
+              <div class="form-panel" id="step-3">
+                <div class="review-card">
+                  <h4>Your Quote Summary</h4>
+                  <div class="review-items" id="review-items">
+                    <!-- Dynamic content -->
+                  </div>
+                </div>
+                <div class="estimated-premium">
+                  <p class="premium-label">Estimated Annual Premium</p>
+                  <p class="premium-value" id="premium-value">Rs 0</p>
+                  <p class="premium-note">*Final premium may vary based on insurer selection</p>
+                </div>
+                <div class="form-row">
+                  <button type="button" class="btn btn-outline btn-block" id="step-3-prev">
+                    <i data-lucide="arrow-left"></i> Back
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-block" id="submit-quote">
+                    <i data-lucide="send"></i> Submit Quote
+                  </button>
+                </div>
+              </div>
+
+              <!-- Success State -->
+              <div class="form-panel" id="step-success" style="display:none;">
+                <div class="success-state">
+                  <div class="success-icon-wrap">
+                    <i data-lucide="check-circle" class="success-icon"></i>
+                  </div>
+                  <h3>Quote Submitted!</h3>
+                  <p>Our team will contact you within 30 minutes with the best insurance plans for your bike.</p>
+                  <button type="button" class="btn btn-primary" id="new-quote-btn">Get Another Quote</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple Process</span>
+          <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+          <p class="section-desc">Getting your bike insured has never been easier. Just follow these simple steps.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon-wrap">
+              <i data-lucide="clipboard-list" class="step-icon"></i>
+            </div>
+            <h3>Share Bike Details</h3>
+            <p>Tell us about your bike — brand, model, year, and estimated value. It takes less than a minute.</p>
+          </div>
+          <div class="step-connector">
+            <i data-lucide="arrow-right"></i>
+          </div>
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon-wrap">
+              <i data-lucide="git-compare" class="step-icon"></i>
+            </div>
+            <h3>Compare Plans</h3>
+            <p>We compare plans from 15+ top insurers and present you with the best coverage options and prices.</p>
+          </div>
+          <div class="step-connector">
+            <i data-lucide="arrow-right"></i>
+          </div>
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon-wrap">
+              <i data-lucide="credit-card" class="step-icon"></i>
+            </div>
+            <h3>Pay & Get Covered</h3>
+            <p>Choose your plan, make a secure payment, and receive your digital policy certificate instantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="plans section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Plans</span>
+          <h2 class="section-title">Choose Your <span class="gradient-text">Plan</span></h2>
+          <p class="section-desc">We offer flexible plans to fit every budget. All plans include 24/7 claims support.
+          </p>
+        </div>
+        <div class="plans-grid">
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Basic</h3>
+              <p class="plan-tagline">Essential Protection</p>
+            </div>
+            <div class="plan-price">
+              <span class="plan-currency">Rs</span>
+              <span class="plan-amount">999</span>
+              <span class="plan-period">/year</span>
+            </div>
+            <ul class="plan-features">
+              <li class="included"><i data-lucide="check-circle-2"></i> Third-Party Liability</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Accidental Death (Rider)</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> 24/7 Helpline Access</li>
+              <li class="excluded"><i data-lucide="x-circle"></i> Theft Coverage</li>
+              <li class="excluded"><i data-lucide="x-circle"></i> Own Damage Coverage</li>
+              <li class="excluded"><i data-lucide="x-circle"></i> Roadside Assistance</li>
+            </ul>
+            <a href="#quote" class="btn btn-outline btn-block">Get This Plan</a>
+          </div>
+          <div class="plan-card featured">
+            <div class="plan-badge">Best Value</div>
+            <div class="plan-header">
+              <h3 class="plan-name">Standard</h3>
+              <p class="plan-tagline">Complete Coverage</p>
+            </div>
+            <div class="plan-price">
+              <span class="plan-currency">Rs</span>
+              <span class="plan-amount">2,499</span>
+              <span class="plan-period">/year</span>
+            </div>
+            <ul class="plan-features">
+              <li class="included"><i data-lucide="check-circle-2"></i> Third-Party Liability</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Accidental Death (Rider)</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> 24/7 Helpline Access</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Theft Coverage</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Own Damage Coverage</li>
+              <li class="excluded"><i data-lucide="x-circle"></i> Roadside Assistance</li>
+            </ul>
+            <a href="#quote" class="btn btn-primary btn-block">Get This Plan</a>
+          </div>
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3 class="plan-name">Premium</h3>
+              <p class="plan-tagline">Maximum Protection</p>
+            </div>
+            <div class="plan-price">
+              <span class="plan-currency">Rs</span>
+              <span class="plan-amount">4,999</span>
+              <span class="plan-period">/year</span>
+            </div>
+            <ul class="plan-features">
+              <li class="included"><i data-lucide="check-circle-2"></i> Third-Party Liability</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Accidental Death (Rider)</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> 24/7 Helpline Access</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Theft Coverage</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Own Damage Coverage</li>
+              <li class="included"><i data-lucide="check-circle-2"></i> Roadside Assistance</li>
+            </ul>
+            <a href="#quote" class="btn btn-outline btn-block">Get This Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">What Our <span class="gradient-text">Customers Say</span></h2>
+          <p class="section-desc">Thousands of bike owners across Pakistan trust RideSafe for their insurance needs.</p>
+        </div>
+        <div class="testimonials-slider" id="testimonials-slider">
+          <div class="testimonial-track" id="testimonial-track">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+              </div>
+              <p class="testimonial-text">"My Honda 125 was stolen from outside my office. RideSafe settled my claim
+                within 7 days. Highly recommended for every bike owner!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AK</div>
+                <div>
+                  <strong>Ahmed Khan</strong>
+                  <span>Karachi — Honda CG 125</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+              </div>
+              <p class="testimonial-text">"Got my Yamaha YBR insured for just Rs 2,500/year. The whole process took 2
+                minutes online. Best bike insurance service in Pakistan!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">FA</div>
+                <div>
+                  <strong>Faisal Ali</strong>
+                  <span>Lahore — Yamaha YBR 125</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star half"></i>
+              </div>
+              <p class="testimonial-text">"Had an accident and my bike was badly damaged. RideSafe covered the entire
+                repair cost and the process was seamless. Thank you!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SR</div>
+                <div>
+                  <strong>Saad Raza</strong>
+                  <span>Islamabad — Suzuki GS 150</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+              </div>
+              <p class="testimonial-text">"Very professional team. They helped me choose the right plan for my CD 70.
+                The WhatsApp support is extremely responsive."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MI</div>
+                <div>
+                  <strong>Muhammad Imran</strong>
+                  <span>Peshawar — Honda CD 70</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="slider-prev" aria-label="Previous testimonial">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="slider-dots" id="slider-dots"></div>
+            <button class="slider-btn" id="slider-next" aria-label="Next testimonial">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partners section-sm">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Trusted Partners</span>
+          <h2 class="section-title-sm">Our Insurance <span class="gradient-text">Partners</span></h2>
+        </div>
+        <div class="partners-marquee">
+          <div class="marquee-track" id="marquee-track">
+            <div class="partner-item">EFU General Insurance</div>
+            <div class="partner-item">Adamjee Insurance</div>
+            <div class="partner-item">Jubilee General Insurance</div>
+            <div class="partner-item">TPL Insurance</div>
+            <div class="partner-item">Askari General Insurance</div>
+            <div class="partner-item">UBL Insurers</div>
+            <div class="partner-item">Alfalah Insurance</div>
+            <div class="partner-item">Asia Insurance</div>
+            <div class="partner-item">Pakistan General Insurance</div>
+            <div class="partner-item">Atlas Insurance</div>
+            <!-- duplicated for continuous scroll -->
+            <div class="partner-item">EFU General Insurance</div>
+            <div class="partner-item">Adamjee Insurance</div>
+            <div class="partner-item">Jubilee General Insurance</div>
+            <div class="partner-item">TPL Insurance</div>
+            <div class="partner-item">Askari General Insurance</div>
+            <div class="partner-item">UBL Insurers</div>
+            <div class="partner-item">Alfalah Insurance</div>
+            <div class="partner-item">Asia Insurance</div>
+            <div class="partner-item">Pakistan General Insurance</div>
+            <div class="partner-item">Atlas Insurance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <p class="section-desc">Find answers to the most common questions about bike insurance in Pakistan.</p>
+        </div>
+        <div class="faq-list" id="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What does bike insurance cover?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Bike insurance typically covers theft of the motorcycle, accidental damage (collision, overturning),
+                fire, natural disasters, and third-party liability. The exact coverage depends on the plan you choose —
+                our Basic plan covers third-party liability, while our Premium plan covers everything including roadside
+                assistance.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Which bikes can be insured?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We insure all types of motorcycles available in Pakistan — from Honda CD 70 and CG 125 to Yamaha YBR,
+                Suzuki GS 150, and imported heavy bikes. Whether your bike is 70cc or 250cc+, we have coverage plans for
+                you.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do I file a claim?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Filing a claim is simple: 1) Contact us via WhatsApp or call our 24/7 helpline, 2) Submit required
+                documents (FIR for theft, or accident photos/report), 3) Our claims team reviews and processes your
+                claim within 3-7 working days. We guide you through every step.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How much does bike insurance cost?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Bike insurance premiums start from as low as Rs 999/year for basic third-party coverage. Comprehensive
+                coverage (theft + accidental damage) typically ranges from Rs 2,499 to Rs 4,999 per year, depending on
+                your bike's make, model, and market value. Use our quote tool above to get an instant estimate!</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is bike insurance mandatory in Pakistan?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>While comprehensive bike insurance is not strictly enforced, third-party liability insurance is
+                required by law under the Motor Vehicles Act. However, given the high theft rates in Pakistan's major
+                cities, we strongly recommend comprehensive coverage for financial protection.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I insure a used or second-hand bike?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We insure both new and used/second-hand bikes. For used bikes, coverage is based on the current
+                market value. Bikes up to 10 years old are eligible for comprehensive coverage, and older bikes can get
+                third-party liability protection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-bg"></div>
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Protect Your Ride?</h2>
+            <p class="cta-desc">Join 10,000+ bike owners who trust RideSafe for their motorcycle insurance. Get covered
+              in under 60 seconds.</p>
+            <div class="cta-actions">
+              <a href="#quote" class="btn btn-white btn-lg">
+                <i data-lucide="zap"></i>
+                Get Instant Quote
+              </a>
+              <a href="https://wa.me/923001234567" target="_blank" class="btn btn-white-outline btn-lg">
+                <i data-lucide="message-circle"></i>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact <span class="gradient-text">Us</span></h2>
+          <p class="section-desc">Have questions? We'd love to hear from you. Reach out via any of these channels.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i data-lucide="phone" class="contact-icon"></i>
+            </div>
+            <h3>Call Us</h3>
+            <p>Mon-Sat, 9AM - 8PM</p>
+            <a href="tel:+923001234567" class="contact-link">+92 300 123 4567</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i data-lucide="message-circle" class="contact-icon"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Quick responses, 24/7</p>
+            <a href="https://wa.me/923001234567" target="_blank" class="contact-link">Chat Now</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i data-lucide="mail" class="contact-icon"></i>
+            </div>
+            <h3>Email</h3>
+            <p>We reply within 24 hours</p>
+            <a href="mailto:info@ridesafe.pk" class="contact-link">info@ridesafe.pk</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">
+              <i data-lucide="map-pin" class="contact-icon"></i>
+            </div>
+            <h3>Visit Us</h3>
+            <p>Head Office</p>
+            <span class="contact-link">Karachi, Pakistan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 2L3 9V23L16 30L29 23V9L16 2Z" fill="url(#footerGrad)" opacity="0.15" />
+                <path d="M16 2L3 9V23L16 30L29 23V9L16 2Z" stroke="url(#footerGrad)" stroke-width="1.5" />
+                <path d="M10 18C10 18 12 14 16 14C20 14 22 18 22 18" stroke="url(#footerGrad)" stroke-width="2"
+                  stroke-linecap="round" />
+                <circle cx="11" cy="20" r="3" stroke="url(#footerGrad)" stroke-width="1.5" />
+                <circle cx="21" cy="20" r="3" stroke="url(#footerGrad)" stroke-width="1.5" />
+                <defs>
+                  <linearGradient id="footerGrad" x1="3" y1="2" x2="29" y2="30">
+                    <stop stop-color="#0ea5e9" />
+                    <stop offset="1" stop-color="#14b8a6" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">Ride<span class="logo-highlight">Safe</span></span>
+          </a>
+          <p class="footer-desc">Pakistan's leading bike insurance platform. Compare, buy, and manage motorcycle
+            insurance — all in one place.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#coverage">Coverage</a>
+          <a href="#quote">Get Quote</a>
+          <a href="#plans">Plans</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-links">
+          <h4>Coverage</h4>
+          <a href="#coverage">Theft Protection</a>
+          <a href="#coverage">Accidental Damage</a>
+          <a href="#coverage">Third-Party Liability</a>
+          <a href="#coverage">Roadside Assistance</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact Us</a>
+          <a href="#">Claims Process</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 RideSafe Insurance. All rights reserved.</p>
+        <p>SECP Licensed Insurance Intermediary</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-float" id="whatsapp-float"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="white">
+      <path
+        d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.718 31.04 12.742 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.53 22.606c-.396 1.118-2.326 2.138-3.206 2.236-.88.098-1.696.396-5.706-1.19-4.842-1.914-7.92-6.896-8.16-7.214-.242-.318-1.964-2.612-1.964-4.982s1.242-3.534 1.684-4.018c.44-.484.964-.604 1.286-.604.322 0 .644.002.924.016.296.016.694-.112 1.086.828.396.95 1.346 3.29 1.466 3.53.118.238.198.516.038.834-.158.318-.238.516-.476.794-.238.278-.5.62-.714.832-.238.238-.486.496-.21.972.278.476 1.234 2.036 2.65 3.298 1.82 1.622 3.354 2.126 3.83 2.364.476.238.754.198 1.032-.118.278-.318 1.192-1.39 1.51-1.868.318-.476.636-.396 1.072-.238.436.158 2.77 1.306 3.246 1.544.476.238.794.356.912.554.118.198.118 1.148-.278 2.266z" />
+    </svg>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
